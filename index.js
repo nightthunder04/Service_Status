@@ -29,6 +29,11 @@ document.querySelectorAll("tr").forEach(row => {
       remainingCell.textContent = '0';
       return;
     }
+    if(revenue<0){
+        alert("Value cannot be negative")
+        revenueInput.value = '';
+        return;
+    }
     
     if(revenue > amount){
         alert("Receiving value should be smaller than amount value ");
